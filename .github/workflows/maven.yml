@@ -72,7 +72,7 @@ jobs:
       - name: Validate Variables
         run: |
           # Retrieve the value of your variable (e.g., operand1)
-          operand1=$OPERAND_1
+          a=$OPERAND_1
 
           # Perform your validation checks on the variable value
           # This could include checks for special characters, potential vulnerabilities, or any other specific validation requirements
