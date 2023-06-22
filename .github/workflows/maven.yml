@@ -36,21 +36,6 @@ jobs:
 
       - name: Run Regression Tests
         run: mvn test -Dtest=com.example.RegressionTest
-
-  deploy:
-    needs: [build]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-      - name: Build with Maven
-        run: mvn clean install
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
